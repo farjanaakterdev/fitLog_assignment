@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-ink: #0c0d10;
+  --color-ink-2: #090a0d;
+  --color-surface: #15171d;
+  --color-surface-2: #13161d;
+  --color-surface-3: #151921;
+  --color-card: #14171e;
+  --color-line: #222630;
+  --color-line-2: #232732;
+  --color-line-3: #1e2330;
+  --color-accent: #c2f800;
+  --color-accent-2: #ccff00;
+  --color-muted: #9ca3af;
+  --color-dim: #6b7280;
+  --color-dim-2: #8a92a0;
+  --color-soft: #d1d5db;
+  --color-soft-2: #e5e7eb;
+  --font-display: var(--font-oswald), "Oswald", sans-serif;
+  --font-sans: var(--font-inter), "Inter", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-ink);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #000;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.toast-in {
+  animation: toast-in 0.25s ease-out;
+}
+
